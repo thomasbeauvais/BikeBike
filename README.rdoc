@@ -1,28 +1,64 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
+This README would document covers the steps that are necessary to get the
 application up and running.
 
-Things you may want to cover:
+We are using:
 
-* Ruby version
+* Rails 4.0
 
-* System dependencies
+* Ruby 1.9.3
 
-* Configuration
+* MySQL 5.5
 
-* Database creation
+* Foundation 4
 
-* Database initialization
+* Compass 0.12.2
 
-* How to run the test suite
+* Sass 3.2.9
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Positive Thinking 2.0
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+=== First things first
+
+To get up and running you'll need to do a few things first. You have a lot of options here such as which IDE
+to choose but those things are between you and your operating system. If you're not sure how to do any of the
+following and can't easily figure it out then you may want to use you efforts elsewhere to brush up on some basics.
+Of course, if we run into extra difficult problems, we can discuss it in the wiki.
+
+1. Install Rails, MySQL, and your IDE (if any of those things aren't installed already)
+
+2. Pull from this Git repo
+
+3. Create the bike_bike, bike_bike_dev, and bike_bike_test databases
+
+4. Modify /config/database.yml, replace 'username' and 'password' with your database username and password.
+
+5. In your command prompt or terminal, navigate to the project folder and execute 'bundle install'. This should install all gems including compass which will automatically build your css files while the server is running.
+
+6. Run the server by executing 'rails server'
+
+7. Start developing
+
+
+=== Coding standards
+
+==== CSS
+
+Don't touch the css files, they are all built from the SCSS files so modify them instead.
+
+
+==== SCSS
+
+...
+
+
+==== HTML
+
+...
+
+
+==== Rails
+
+...
