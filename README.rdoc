@@ -115,7 +115,6 @@ changes easier in the future.
 The layout of each stylesheet should follow the structure of Includes, Variable Definitions, Mixin Definitions, Global Tags, Layout Elements, Custom Classes. The layout elements should
 contain only a few outside selectors but progressively nest each element in the order that they would most likely fall on the page:
 
-<tt>
     /* Includes */
     @import "base";
 
@@ -199,8 +198,6 @@ contain only a few outside selectors but progressively nest each element in the 
         }
     }
 
-</tt>
-
 ==== Compass
 
 http://compass-style.org/help/tutorials/best_practices/
@@ -208,7 +205,6 @@ http://compass-style.org/help/tutorials/best_practices/
 We will mainly be using Compass for its library of mixins which help to cut down on the code required for developing cross-browser CSS.
 For example instead of using the code:
 
-<tt>
     button {
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -216,15 +212,12 @@ For example instead of using the code:
         -o-border-radius: 10px;
         border-radius: 10px;
    }
-</tt>
 
 We can simply use:
 
-<tt>
     button {
         @include border-radius(10px);
     }
-</tt>
 
 ==== HTML
 
