@@ -223,7 +223,7 @@ We can simply use:
 
 http://www.youtube.com/watch?v=-4xutCTxBbc
 
-We will be using sematic HTML5 markup. This means avoiding tags such as <tt>div</tt>, and <tt>span</span> for more semantic options
+We will be using sematic HTML5 markup. This means avoiding tags such as <tt>div</tt>, and <tt>span</tt> for more semantic options
 such as <tt>section</tt>, <tt>article</tt>, <tt>aside</tt>, <tt>time</tt>, ect..
 
 The use of classes should be minimal. The preferred option is to style elements using smarter CSS queries such as <tt>#main > a</tt>,
