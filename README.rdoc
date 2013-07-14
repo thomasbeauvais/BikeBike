@@ -1,7 +1,7 @@
-== README
+== Bike!Bike!
 
-This README would document covers the steps that are necessary to get the
-application up and running.
+Before becoming a collaborator, please review this document; it contains all the information you should need
+to get started and to collaborate as a developer.
 
 We are using:
 
@@ -17,8 +17,6 @@ We are using:
 
 * Sass 3.2.9
 
-* Positive Thinking 2.0
-
 
 === First things first
 
@@ -33,7 +31,7 @@ Of course, if we run into extra difficult problems, we can discuss it in the wik
 
 3. Create the bike_bike, bike_bike_dev, and bike_bike_test databases
 
-4. Modify /config/database.yml, replace 'username' and 'password' with your database username and password.
+4. Copy /config/~database.yml to /config/database.yml, and replace 'user' and 'pass' with your database username and password. Don't just rename it, others will need this file.
 
 5. In your command prompt or terminal, navigate to the project folder and execute 'bundle install'. This should install all gems including compass which will automatically build your css files while the server is running.
 
@@ -42,22 +40,211 @@ Of course, if we run into extra difficult problems, we can discuss it in the wik
 7. Start developing
 
 
+=== How can I get started?
+
+First email Godwin at goodgodwin@hotmail.com to request to become a collaborator, please provide your github account name, google+ email for meetings,
+and the email you use for Trello (if different than the one you emailed him with).
+
+There are options to get involved besides development such as design, user experience, infrastructure, and security. Email
+Godwin or attend a meeting so that we can get you involved.
+
+=== Trello
+
+Our Trello organization is at https://trello.com/bikebike. You can view the boards without being a member but to collaborate,
+you'll need to be able to assign yourself tasks and mark them as complete.
+
+We will be mainly using the 'Tasks' board where all small tasks will be entered.
+
+1. Create a list for yourself if it's not there already (Scroll to the ens of the lists and click 'Add a list...')
+2. Find an card in the 'To Do' list that you would like to work on
+3. Assign yourself to that card
+4. Move that card to your list to show that you're working on it.
+
+Although 3 & 4 seem to be a little redundant, assigning yourself to a card in this case is more akin to watching. You might want
+to work on a card at a later point but leave it in the list for someone else to take in case they get to it first, or you might need
+to collaborate with another person who is doing most of the work.
+
+When you have finished working on a task, move it to the 'Complete' list. Also watch for cards that move from done back to your list, this might
+happen if there were issues of one kind or another with the work.
+
+==== When is a task complete?
+
+You are only done with a task once
+
+1. Is has been thoroughly unit tested (see testing section)
+2. Your changes have been committed 
+
+This is extremely important and as much as we need your help, not frequently going these two things will lead you to be booted out of
+being able to contribute.
+
+
+==== Bugs
+
+We will be using GitHub for reporting and triaging of issues (https://github.com/bikebike/BikeBike/issues), any user or developer can help
+out by reporting here. After an issue has been fully assessed and confirmed, it should become a task in Trello. Alternatively we you want
+to reopen a previous task assigned to another user if the problem can be identified to a specific task, in this case simply add the issue
+link to the card as a comment and move the card from 'Complete' to 'To Do'.
+
+Once a bug has been resolved, remember to both complete the task in Trello and close the issue in GitHub.
+
+=== Meetings
+
+We will be holding a meeting every week. Currently the time is set to Sundays at 1PM Eastern/10AM Pacific and we will be doing this
+via Google Hangouts (so please also remember to give Godwin your google+ info or just connect with him yourself). If we have more than
+10 people joining we will need to look for an alternative, also the time is negotiable, we'll just have to discuss it some more.
+
+Meetings are optional but will be very useful for collaborating ideas efficiently, solving issues, and most of all, maintaining a sense
+of collaboration, community, and commitment with one another.
+
 === Coding standards
 
 ==== CSS
 
 Don't touch the css files, they are all built from the SCSS files so modify them instead.
 
+==== SASS/SCSS
 
-==== SCSS
+http://www.youtube.com/watch?v=aTaaohyPtnY
 
-...
+We will be using SCSS for our stylesheets. SCSS is similar to SASS (see the video above) but maintains the brackets and semi-colons
+from standard CSS.
 
+With SCSS, you should avoid using pixel, percentage, em, and colour values directly and instead, define them as variables to help make
+changes easier in the future.
+
+The layout of each stylesheet should follow the structure of Includes, Variable Definitions, Mixin Definitions, Global Tags, Layout Elements, Custom Classes. The layout elements should
+contain only a few outside selectors but progressively nest each element in the order that they would most likely fall on the page:
+
+<code>
+    /* Includes */
+    @import "base";
+
+    /* Variable Definitions */
+    $font-color: #333;
+    $font-size: 12px;
+    $background-color: #EEE;
+
+    /* Mixin Definitions */
+    @mixin rounded($vert, $horz, $radius: 10px) {
+        border-#{$vert}-#{$horz}-radius: $radius;
+        -moz-border-radius-#{$vert}#{$horz}: $radius;
+        -webkit-border-#{$vert}-#{$horz}-radius: $radius;
+    }
+
+    /* Global Tags */
+
+    body {
+        font-size: $font-size;
+        font-color: $font-color;
+    }
+
+    h1 {
+        font-size: ($font-size * 1.5);
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    /* Layout Elements */
+    
+    body {
+        background-color: $background-color;
+
+        > #container {
+            width: 100%;
+            max-width: 980px;
+            margin: 0 auto;
+
+            > header {
+                width: 100%;
+                background-color: $font-color;
+                $color: $background-color;
+            }
+
+            > #main {
+                width: 100%;
+
+                > aside {
+                    float: left;
+                }
+
+                > article {
+
+                    p {
+                        margin: 0 0 1em;
+                    }
+                    
+                    form {
+                        button {
+                            @include rounded(1px, 1px, 4px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Custom Classes */
+
+    .important {
+        background-color: yellow;
+    }
+
+    .read-more {
+        color: lighten($font-color, 10%);
+
+        &:after {
+            content: '>';
+        }
+    }
+
+</code>
+
+==== Compass
+
+http://compass-style.org/help/tutorials/best_practices/
+
+We will mainly be using Compass for its library of mixins which help to cut down on the code required for developing cross-browser CSS.
+For example instead of using the code:
+
+<code>
+    button {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+   }
+</code>
+
+We can simply use:
+
+<code>
+    button {
+        @include border-radius(10px);
+    }
+</code>
 
 ==== HTML
 
-...
+http://www.youtube.com/watch?v=-4xutCTxBbc
 
+We will be using sematic HTML5 markup. This means avoiding tags such as <tt>div</tt>, and <tt>span</span> for more semantic options
+such as <tt>section</tt>, <tt>article</tt>, <tt>aside</tt>, <tt>time</tt>, ect..
+
+The use of classes should be minimal. The preferred option is to style elements using smarter CSS queries such as <tt>#main > a</tt>,
+<tt>tr:nth-child(2n)</tt>, <tt>p + table</tt>, ect... This technique should create a more consistent look and feel without requiring
+developers to add classes to every element. It does make sense to add a class to specific items such as <tt><button class="important">Click Here</button></tt>.
+
+Classes are also required for the proper use of Foundation.
+
+==== Foundation
+
+http://foundation.zurb.com/docs/components/grid.html
+
+We will be using foundation classes to help responsive design. We will mostly be making use of Foundation's grid layout but also its navigation
+features.
 
 ==== Rails
 
