@@ -239,6 +239,10 @@ http://foundation.zurb.com/docs/components/grid.html
 We will be using foundation classes to help responsive design. We will mostly be making use of Foundation's grid layout but also its navigation
 features.
 
+==== JQuery
+
+JQuery is great, but we're going to avoid using it where we can achieve what we want using CSS3 transitions and animations.
+
 ==== Rails
 
 ...

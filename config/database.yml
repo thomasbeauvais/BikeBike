@@ -7,8 +7,8 @@ development:
   adapter: mysql2
   encoding: utf8
   database: bike_bike_dev
-  username: user
-  password: pass
+  username: bike_bike
+  password: NewOrleans@)!#
   host: 127.0.0.1
   port: 3306
 
@@ -19,8 +19,8 @@ test:
   adapter: mysql2
   encoding: utf8
   database: bike_bike_test
-  username: user
-  password: pass
+  username: bike_bike
+  password: NewOrleans@)!#
   host: 127.0.0.1
   port: 3306
 
@@ -28,7 +28,7 @@ production:
   adapter: mysql2
   encoding: utf8
   database: bike_bike
-  username: user
-  password: pass
+  username: bike_bike
+  password: NewOrleans@)!#
   host: 127.0.0.1
   port: 3306
