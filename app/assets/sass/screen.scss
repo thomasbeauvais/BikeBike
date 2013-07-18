@@ -4,34 +4,75 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-@import "foundation";
+@import "foundation_and_overrides";
 
 $widget-colour: #EEE;
 
 body {
-    background-color: #FFF;
+    
+    > nav.top-bar {
+        max-width: $row-width;
+        margin: 0 auto;
+        
+        .top-bar-section {
+            .has-form {
+                padding-top: 0.5em;
+            }
+        }
+    }
     
     #container {
-
         > header {
         }
 
         > #main {
-
+            background-color: #F4F4F4;
+            border: 1px solid #DDD;
+                        
             > aside {
-                > section {
-                    background-color: $widget-colour;
-                    padding: 10%;
+                padding: 1em;
+                
+                > h1 {
+                    line-height: 1em;
+                    font-size: 2.25em;
+                    text-align: center;
                 }
             }
 
             > section {
-
+                margin: 0;
+                padding: 0;
+                
+                > header {
+                    background-image: url('/assets/bg_graylines.gif');
+                    border: 1px solid #DDD;
+                    border-width: 0 1px 1px 0;
+                    padding: 0;
+                    
+                    > img {
+                        vertical-align: bottom;
+                    }
+                }
+                
+                > nav {
+                    padding: 1em;
+                }
+                
+                > div {
+                    background-color: #FFF;
+                    border: 1px solid #DDD;
+                    border-width: 0 1px;
+                    padding: 1.5em 2em;
+                }
             }
         }
 
         > footer {
-
+            border: 1px solid #DDD;
+            border-width: 0 1px;
+            padding: 1em;
+            background-color: #F4F4F4;
+            min-height: 4em;
         }
     }
 }

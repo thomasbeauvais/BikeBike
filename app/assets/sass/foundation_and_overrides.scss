@@ -15,7 +15,7 @@
 // $em-base: 16px;
 
 // We use these to control various global styles
-// $body-bg: #fff;
+ $body-bg: #EEE;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
@@ -65,7 +65,7 @@
 // Grid Variables
 //
 
-// $row-width: 62.5em;
+$row-width: 1440px;
 // $column-gutter: 1.875em;
 // $total-columns: 12;
 
@@ -971,8 +971,8 @@
 // $topbar-bg: #111;
 
 // Height and margin
-// $topbar-height: 45px;
-// $topbar-margin-bottom: emCalc(30px);
+ $topbar-height: 64px;
+ $topbar-margin-bottom: 0;//emCalc(0px);
 
 // Control Input height for top bar
 // $topbar-input-height: 2.45em;
