@@ -16,6 +16,8 @@ body {
     > nav.top-bar {
         max-width: $row-width;
         margin: 0 auto;
+        border: 1px solid #DDD;
+        border-width: 0 1px 1px 0;
         
         .top-bar-section {
             .has-form {
@@ -31,6 +33,7 @@ body {
         > #main {
             background-color: #F4F4F4;
             border: 1px solid #DDD;
+            border-top: 0;
                         
             > aside {
                 padding: 1em;
@@ -78,9 +81,6 @@ body {
             min-height: 4em;
         }
     }
-}
-
-.top-bar .name {
 }
 
 h1 {
