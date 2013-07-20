@@ -18,3 +18,4 @@
 /.sass-cache
 /nbproject
 /config/database.yml
+/authenticate.yml

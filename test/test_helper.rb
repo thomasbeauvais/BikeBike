@@ -1,4 +1,14 @@
 ENV["RAILS_ENV"] ||= "test"
+
+require 'coveralls'
+Coveralls.wear!('rails')
+
+require 'simplecov'
+SimpleCov.start do
+  #add_filter '/folder/'
+  minimum_coverage 90
+end if ENV["test"]
+
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 

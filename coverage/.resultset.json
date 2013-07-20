@@ -1,0 +1,15 @@
+{
+  "Unknown Test Framework": {
+    "coverage": {
+      "C:/Sites/Bike!Bike!/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Sites/Bike!Bike!/app/helpers/main_helper.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1374341910
+  }
+}
