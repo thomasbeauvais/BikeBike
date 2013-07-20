@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3' # for Travis testing
 gem 'mysql2'
 
 # Use SCSS for stylesheets
@@ -52,5 +51,8 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'simplecov'
-gem 'coveralls', require: false
+group :test do
+  gem 'sqlite3' # for Travis testing
+  gem 'simplecov'
+  gem 'coveralls', require: false
+end
