@@ -6,20 +6,23 @@
 @import "compass/reset";
 @import "foundation_and_overrides";
 
-@import url(http://fonts.googleapis.com/css?family=Dosis);
-
-
-$widget-colour: #EEE;
+@import url(http://fonts.googleapis.com/css?family=#{$heading-font-name}:400,600);
 
 body {
     
     > nav.top-bar {
         max-width: $row-width;
         margin: 0 auto;
-        border: 1px solid #DDD;
-        border-width: 0 1px;
+        border: $layout-divider-width solid $layout-divider-color;
+        border-width: 0 $layout-divider-width;
         
         .top-bar-section {
+            font-family: $heading-font;
+
+            ul li > a {
+                font-weight: 600;
+                font-size: 0.9em;
+            }
             .has-form {
                 padding-top: 0.5em;
             }
@@ -31,8 +34,8 @@ body {
         }
 
         > #main {
-            background-color: #F4F4F4;
-            border: 1px solid #DDD;
+            background-color: $panel-background-colour;
+            border: $layout-divider-width solid $layout-divider-color;
             border-top: 0;
                         
             > aside {
@@ -51,12 +54,12 @@ body {
                 
                 > header {
                     background-image: url('/assets/bg_graylines.gif');
-                    border: 1px solid #DDD;
-                    border-width: 0 1px 1px 0;
+                    border: $layout-divider-width solid $layout-divider-color;
+                    border-width: 0 $layout-divider-width $layout-divider-width 0;
                     padding: 0;
                     
                     > img {
-                        vertical-align: bottom;
+                        vertical-align: text-bottom;
                     }
                 }
                 
@@ -65,26 +68,27 @@ body {
                 }
                 
                 > div {
-                    background-color: #FFF;
-                    border: 1px solid #DDD;
-                    border-width: 0 1px;
+                    background-color: $article-background-color;
+                    border: $layout-divider-width solid $layout-divider-color;
+                    border-width: 0 $layout-divider-width;
                     padding: 1.5em 2em;
                 }
             }
         }
 
         > footer {
-            border: 1px solid #DDD;
-            border-width: 0 1px;
+            border: $layout-divider-width solid $layout-divider-color;
+            border-width: 0 $layout-divider-width;
             padding: 1em;
-            background-color: #F4F4F4;
+            background-color: $panel-background-colour;
             min-height: 4em;
         }
     }
 }
 
 h1 {
-    font-family: 'Dosis', sans-serif;
+    font-family: $heading-font;
+    font-weight: normal;
 }
 
 .top-bar .name {
@@ -106,6 +110,15 @@ h1 {
             position: relative;
             top: -0.2em;
             left: -0.075em;
+        }
+        
+        &:hover {
+            color: #EEE;
+            background-color: #000;
+            
+            > span {
+                color: #999;
+            }
         }
 
         &:first-letter {
