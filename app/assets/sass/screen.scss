@@ -6,6 +6,8 @@
 @import "compass/reset";
 @import "foundation_and_overrides";
 
+@import url(http://fonts.googleapis.com/css?family=Dosis);
+
 $widget-colour: #EEE;
 
 body {
@@ -73,6 +75,40 @@ body {
             padding: 1em;
             background-color: #F4F4F4;
             min-height: 4em;
+        }
+    }
+}
+
+.top-bar .name {
+}
+
+h1 {
+    font-family: 'Dosis', sans-serif;
+}
+
+.top-bar .name {
+    overflow: hidden;
+    
+    h1 a {
+        padding: 0;
+        font-size: 98px;
+        letter-spacing: -0.05em;
+        font-weight: normal;
+        position: relative;
+        top: -0.05em;
+        left: -0.1em;
+
+        > span {
+            font-size: 0.4em;
+            letter-spacing: 0em;
+            color: #AAA;
+            position: relative;
+            top: -0.2em;
+            left: -0.075em;
+        }
+
+        &:first-letter {
+            font-size: 0.96em;
         }
     }
 }
