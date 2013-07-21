@@ -9,7 +9,7 @@ We are using:
 
 * Ruby 1.9.3
 
-* MySQL 5.5
+* PostgreSQL 9.2
 
 * Foundation 4
 
@@ -25,13 +25,13 @@ to choose but those things are between you and your operating system. If you're 
 following and can't easily figure it out then you may want to use you efforts elsewhere to brush up on some basics.
 Of course, if we run into extra difficult problems, we can discuss it in the wiki.
 
-1. Install Rails, MySQL, and your IDE (if any of those things aren't installed already)
+1. Install Rails, PostgreSQL, and your IDE (if any of those things aren't installed already)
 
 2. Pull from this Git repo
 
 3. Create the bike_bike, bike_bike_dev, and bike_bike_test databases
 
-4. Copy /config/~database.yml to /config/database.yml, and replace 'user' and 'pass' with your database username and password. Don't just rename it, others will need this file.
+4. Copy /config/~database.yml to /config/database.yml, and replace 'user' and 'pass' with your database username and password (you may also need to change your port). Don't just rename it, others will need this file.
 
 5. In your command prompt or terminal, navigate to the project folder and execute 'bundle install'. This should install all gems including compass which will automatically build your css files while the server is running.
 
