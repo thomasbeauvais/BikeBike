@@ -4,11 +4,11 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.11'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem 'compass-rails',    github: "milgner/compass-rails", ref: "1749c06f15dc4b058427e7969810457213647fb8"
+gem 'compass-rails', github: "milgner/compass-rails", ref: "1749c06f15dc4b058427e7969810457213647fb8"
 gem 'zurb-foundation', '~> 4.0.0'
 gem "modernizr-rails",  "~> 2.6.2"
 
@@ -51,7 +51,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :test do
+group :production do
   gem 'sqlite3' # for Travis testing
   gem 'simplecov'
   gem 'coveralls', require: false
