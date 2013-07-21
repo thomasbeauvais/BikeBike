@@ -56,7 +56,7 @@ end
 
 gem 'rails_12factor', group: :production
 
-group :production do
+group :test do
   gem 'sqlite3' # for Travis testing
   gem 'simplecov'
   gem 'coveralls', require: false
